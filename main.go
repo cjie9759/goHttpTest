@@ -20,8 +20,8 @@ func main() {
 	t = make(chan bool, *n)
 	// t = *t1
 	fmt.Println("Hello, world")
-	for i := 0; ; i++ {
-		log.Println("第", i+1, "次攻击")
+	for i := 1; ; i++ {
+		log.Println("第", i, "次攻击")
 		t <- true
 		go func() {
 			request(*url)
